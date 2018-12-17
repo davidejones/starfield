@@ -21,6 +21,8 @@ class StarField:
     def __init__(self, width, height, depth=32, num_stars=500):
         self.master = Tk()
         self.master.title("StarField")
+        self.master.resizable(False, False)
+        self.master.maxsize(width, height)
         self.fov = 180 * math.pi / 180
         self.view_distance = 0
         self.stars = []
